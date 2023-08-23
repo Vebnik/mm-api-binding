@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Any
 
 from src.bot.schemas import Event
-from src.ws.schemas import posts
+from src.ws.schemas import posts,reaction_added
 
 
 class BaseEvent(BaseModel):
@@ -14,4 +14,5 @@ class BaseEvent(BaseModel):
 
 event_model = {
     Event.posted: posts.PostedEvent,
+    Event.reaction_added: reaction_added.ReactionAddedEvent
 }

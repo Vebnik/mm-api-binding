@@ -22,4 +22,3 @@ class PostData(BaseModel):
     file_ids: list[str] | list[None] = []
     props: dict | None = {}
     metadata: dict | None = {}
-
