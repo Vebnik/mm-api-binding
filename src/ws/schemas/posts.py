@@ -1,8 +1,7 @@
 from pydantic import BaseModel, field_validator
 
 from src.api.api import Posts
-from src.api.schemas import PostData
-
+from src.api.schemas.schemas import PostData
 
 
 class Post(BaseModel):
