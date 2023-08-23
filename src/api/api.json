@@ -1,0 +1,1830 @@
+[
+    {
+        "url": "/api/v4/users/migrate_auth/ldap",
+        "name": "Migrate user accounts authentication type to LDAP."
+    },
+    {
+        "url": "/api/v4/users/migrate_auth/saml",
+        "name": "Migrate user accounts authentication type to SAML."
+    },
+    {
+        "url": "/api/v4/users/login",
+        "name": "Login to Mattermost server"
+    },
+    {
+        "url": "/api/v4/users/login/cws",
+        "name": "Auto-Login to Mattermost server using CWS token"
+    },
+    {
+        "url": "/api/v4/users/logout",
+        "name": "Logout from the Mattermost server"
+    },
+    {
+        "url": "/api/v4/users",
+        "name": "Create a user"
+    },
+    {
+        "url": "/api/v4/users",
+        "name": "Get users"
+    },
+    {
+        "url": "/api/v4/users",
+        "name": "Permanent delete all users"
+    },
+    {
+        "url": "/api/v4/users/ids",
+        "name": "Get users by ids"
+    },
+    {
+        "url": "/api/v4/users/group_channels",
+        "name": "Get users by group channels ids"
+    },
+    {
+        "url": "/api/v4/users/usernames",
+        "name": "Get users by usernames"
+    },
+    {
+        "url": "/api/v4/users/search",
+        "name": "Search users"
+    },
+    {
+        "url": "/api/v4/users/autocomplete",
+        "name": "Autocomplete users"
+    },
+    {
+        "url": "/api/v4/users/known",
+        "name": "Get user IDs of known users"
+    },
+    {
+        "url": "/api/v4/users/stats",
+        "name": "Get total count of users in the system"
+    },
+    {
+        "url": "/api/v4/users/stats/filtered",
+        "name": "Get total count of users in the system matching the specified filters"
+    },
+    {
+        "url": "/api/v4/users/{user_id}",
+        "name": "Get a user"
+    },
+    {
+        "url": "/api/v4/users/{user_id}",
+        "name": "Update a user"
+    },
+    {
+        "url": "/api/v4/users/{user_id}",
+        "name": "Deactivate a user account."
+    },
+    {
+        "url": "/api/v4/users/{user_id}/patch",
+        "name": "Patch a user"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/roles",
+        "name": "Update a user's roles"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/active",
+        "name": "Update user active status"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/image",
+        "name": "Get user's profile image"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/image",
+        "name": "Set user's profile image"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/image",
+        "name": "Delete user's profile image"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/image/default",
+        "name": "Return user's default (generated) profile image"
+    },
+    {
+        "url": "/api/v4/users/username/{username}",
+        "name": "Get a user by username"
+    },
+    {
+        "url": "/api/v4/users/password/reset",
+        "name": "Reset password"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/mfa",
+        "name": "Update a user's MFA"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/mfa/generate",
+        "name": "Generate MFA secret"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/demote",
+        "name": "Demote a user to a guest"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/promote",
+        "name": "Promote a guest to user"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/convert_to_bot",
+        "name": "Convert a user into a bot"
+    },
+    {
+        "url": "/api/v4/users/mfa",
+        "name": "Check MFA"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/password",
+        "name": "Update a user's password"
+    },
+    {
+        "url": "/api/v4/users/password/reset/send",
+        "name": "Send password reset email"
+    },
+    {
+        "url": "/api/v4/users/email/{email}",
+        "name": "Get a user by email"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/sessions",
+        "name": "Get user's sessions"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/sessions/revoke",
+        "name": "Revoke a user session"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/sessions/revoke/all",
+        "name": "Revoke all active sessions for a user"
+    },
+    {
+        "url": "/api/v4/users/sessions/device",
+        "name": "Attach mobile device"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/audits",
+        "name": "Get user's audits"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/email/verify/member",
+        "name": "Verify user email by ID"
+    },
+    {
+        "url": "/api/v4/users/email/verify",
+        "name": "Verify user email"
+    },
+    {
+        "url": "/api/v4/users/email/verify/send",
+        "name": "Send verification email"
+    },
+    {
+        "url": "/api/v4/users/login/switch",
+        "name": "Switch login method"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/tokens",
+        "name": "Create a user access token"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/tokens",
+        "name": "Get user access tokens"
+    },
+    {
+        "url": "/api/v4/users/tokens",
+        "name": "Get user access tokens"
+    },
+    {
+        "url": "/api/v4/users/tokens/revoke",
+        "name": "Revoke a user access token"
+    },
+    {
+        "url": "/api/v4/users/tokens/{token_id}",
+        "name": "Get a user access token"
+    },
+    {
+        "url": "/api/v4/users/tokens/disable",
+        "name": "Disable personal access token"
+    },
+    {
+        "url": "/api/v4/users/tokens/enable",
+        "name": "Enable personal access token"
+    },
+    {
+        "url": "/api/v4/users/tokens/search",
+        "name": "Search tokens"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/auth",
+        "name": "Update a user's authentication method"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/terms_of_service",
+        "name": "Records user action when they accept or decline custom terms of service"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/terms_of_service",
+        "name": "Fetches user's latest terms of service action if the latest action was for acceptance."
+    },
+    {
+        "url": "/api/v4/users/sessions/revoke/all",
+        "name": "Revoke all sessions from all users."
+    },
+    {
+        "url": "/api/v4/users/{user_id}/typing",
+        "name": "Publish a user typing websocket event."
+    },
+    {
+        "url": "/api/v4/users/{user_id}/uploads",
+        "name": "Get uploads for a user"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/channel_members",
+        "name": "Get all channel members from all teams for a user"
+    },
+    {
+        "url": "/api/v4/users/migrate_auth/ldap",
+        "name": "Migrate user accounts authentication type to LDAP."
+    },
+    {
+        "url": "/api/v4/users/migrate_auth/saml",
+        "name": "Migrate user accounts authentication type to SAML."
+    },
+    {
+        "url": "/api/v4/users/invalid_emails",
+        "name": "Get users with invalid emails"
+    },
+    {
+        "url": "/api/v4/bots/{bot_user_id}/convert_to_user",
+        "name": "Convert a bot into a user"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/convert_to_bot",
+        "name": "Convert a user into a bot"
+    },
+    {
+        "url": "/api/v4/bots",
+        "name": "Create a bot"
+    },
+    {
+        "url": "/api/v4/bots",
+        "name": "Get bots"
+    },
+    {
+        "url": "/api/v4/bots/{bot_user_id}",
+        "name": "Patch a bot"
+    },
+    {
+        "url": "/api/v4/bots/{bot_user_id}",
+        "name": "Get a bot"
+    },
+    {
+        "url": "/api/v4/bots/{bot_user_id}/disable",
+        "name": "Disable a bot"
+    },
+    {
+        "url": "/api/v4/bots/{bot_user_id}/enable",
+        "name": "Enable a bot"
+    },
+    {
+        "url": "/api/v4/bots/{bot_user_id}/assign/{user_id}",
+        "name": "Assign a bot to a user"
+    },
+    {
+        "url": "/api/v4/bots/{bot_user_id}/icon",
+        "name": "Get bot's LHS icon"
+    },
+    {
+        "url": "/api/v4/bots/{bot_user_id}/icon",
+        "name": "Set bot's LHS icon image"
+    },
+    {
+        "url": "/api/v4/bots/{bot_user_id}/icon",
+        "name": "Delete bot's LHS icon image"
+    },
+    {
+        "url": "/api/v4/bots/{bot_user_id}/convert_to_user",
+        "name": "Convert a bot into a user"
+    },
+    {
+        "url": "/api/v4/teams",
+        "name": "Create a team"
+    },
+    {
+        "url": "/api/v4/teams",
+        "name": "Get teams"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}",
+        "name": "Get a team"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}",
+        "name": "Update a team"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}",
+        "name": "Delete a team"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/patch",
+        "name": "Patch a team"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/privacy",
+        "name": "Update teams's privacy"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/restore",
+        "name": "Restore a team"
+    },
+    {
+        "url": "/api/v4/teams/name/{name}",
+        "name": "Get a team by name"
+    },
+    {
+        "url": "/api/v4/teams/search",
+        "name": "Search teams"
+    },
+    {
+        "url": "/api/v4/teams/name/{name}/exists",
+        "name": "Check if team exists"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams",
+        "name": "Get a user's teams"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/members",
+        "name": "Get team members"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/members",
+        "name": "Add user to team"
+    },
+    {
+        "url": "/api/v4/teams/members/invite",
+        "name": "Add user to team from invite"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/members/batch",
+        "name": "Add multiple users to team"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/members",
+        "name": "Get team members for a user"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/members/{user_id}",
+        "name": "Get a team member"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/members/{user_id}",
+        "name": "Remove user from team"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/members/ids",
+        "name": "Get team members by ids"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/stats",
+        "name": "Get a team stats"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/regenerate_invite_id",
+        "name": "Regenerate the Invite ID from a Team"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/image",
+        "name": "Get the team icon"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/image",
+        "name": "Sets the team icon"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/image",
+        "name": "Remove the team icon"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/members/{user_id}/roles",
+        "name": "Update a team member roles"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/members/{user_id}/schemeRoles",
+        "name": "Update the scheme-derived roles of a team member."
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/unread",
+        "name": "Get team unreads for a user"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/unread",
+        "name": "Get unreads for a team"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/invite/email",
+        "name": "Invite users to the team by email"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/invite-guests/email",
+        "name": "Invite guests to the team by email"
+    },
+    {
+        "url": "/api/v4/teams/invites/email",
+        "name": "Invalidate active email invitations"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/import",
+        "name": "Import a Team from other application"
+    },
+    {
+        "url": "/api/v4/teams/invite/{invite_id}",
+        "name": "Get invite info for a team"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/scheme",
+        "name": "Set a team's scheme"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/members_minus_group_members",
+        "name": "Team members minus group members."
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/files/search",
+        "name": "Search files in a team"
+    },
+    {
+        "url": "/api/v4/channels",
+        "name": "Get a list of all channels"
+    },
+    {
+        "url": "/api/v4/channels",
+        "name": "Create a channel"
+    },
+    {
+        "url": "/api/v4/channels/direct",
+        "name": "Create a direct message channel"
+    },
+    {
+        "url": "/api/v4/channels/group",
+        "name": "Create a group message channel"
+    },
+    {
+        "url": "/api/v4/channels/search",
+        "name": "Search all private and open type channels across all teams"
+    },
+    {
+        "url": "/api/v4/channels/group/search",
+        "name": "Search Group Channels"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/channels/ids",
+        "name": "Get a list of channels by ids"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/timezones",
+        "name": "Get timezones in a channel"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}",
+        "name": "Get a channel"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}",
+        "name": "Update a channel"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}",
+        "name": "Delete a channel"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/patch",
+        "name": "Patch a channel"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/privacy",
+        "name": "Update channel's privacy"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/restore",
+        "name": "Restore a channel"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/move",
+        "name": "Move a channel"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/stats",
+        "name": "Get channel statistics"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/pinned",
+        "name": "Get a channel's pinned posts"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/channels",
+        "name": "Get public channels"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/channels/private",
+        "name": "Get private channels"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/channels/deleted",
+        "name": "Get deleted channels"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/channels/autocomplete",
+        "name": "Autocomplete channels"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/channels/search_autocomplete",
+        "name": "Autocomplete channels for search"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/channels/search",
+        "name": "Search channels"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/channels/search_archived",
+        "name": "Search archived channels"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/channels/name/{channel_name}",
+        "name": "Get a channel by name"
+    },
+    {
+        "url": "/api/v4/teams/name/{team_name}/channels/name/{channel_name}",
+        "name": "Get a channel by name and team name"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/members",
+        "name": "Get channel members"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/members",
+        "name": "Add user to channel"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/members/ids",
+        "name": "Get channel members by ids"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/members/{user_id}",
+        "name": "Get channel member"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/members/{user_id}",
+        "name": "Remove user from channel"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/members/{user_id}/roles",
+        "name": "Update channel roles"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/members/{user_id}/schemeRoles",
+        "name": "Update the scheme-derived roles of a channel member."
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/members/{user_id}/notify_props",
+        "name": "Update channel notifications"
+    },
+    {
+        "url": "/api/v4/channels/members/{user_id}/view",
+        "name": "View channel"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/channels/members",
+        "name": "Get channel memberships and roles for a user"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/channels",
+        "name": "Get channels for user"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/channels",
+        "name": "Get all channels from all teams"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/channels/{channel_id}/unread",
+        "name": "Get unread messages"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/scheme",
+        "name": "Set a channel's scheme"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/members_minus_group_members",
+        "name": "Channel members minus group members."
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/member_counts_by_group",
+        "name": "Channel members counts for each group that has atleast one member in the channel"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/moderations",
+        "name": "Get information about channel's moderation."
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/moderations/patch",
+        "name": "Update a channel's moderation settings."
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/channels/categories",
+        "name": "Get user's sidebar categories"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/channels/categories",
+        "name": "Create user's sidebar category"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/channels/categories",
+        "name": "Update user's sidebar categories"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/channels/categories/order",
+        "name": "Get user's sidebar category order"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/channels/categories/order",
+        "name": "Update user's sidebar category order"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/channels/categories/{category_id}",
+        "name": "Get sidebar category"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/channels/categories/{category_id}",
+        "name": "Update sidebar category"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/channels/categories/{category_id}",
+        "name": "Delete sidebar category"
+    },
+    {
+        "url": "/api/v4/posts",
+        "name": "Create a post"
+    },
+    {
+        "url": "/api/v4/posts/ephemeral",
+        "name": "Create a ephemeral post"
+    },
+    {
+        "url": "/api/v4/posts/{post_id}",
+        "name": "Get a post"
+    },
+    {
+        "url": "/api/v4/posts/{post_id}",
+        "name": "Delete a post"
+    },
+    {
+        "url": "/api/v4/posts/{post_id}",
+        "name": "Update a post"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/posts/{post_id}/set_unread",
+        "name": "Mark as unread from a post."
+    },
+    {
+        "url": "/api/v4/posts/{post_id}/patch",
+        "name": "Patch a post"
+    },
+    {
+        "url": "/api/v4/posts/{post_id}/thread",
+        "name": "Get a thread"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/posts/flagged",
+        "name": "Get a list of flagged posts"
+    },
+    {
+        "url": "/api/v4/posts/{post_id}/files/info",
+        "name": "Get file info for post"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/posts",
+        "name": "Get posts for a channel"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/channels/{channel_id}/posts/unread",
+        "name": "Get posts around oldest unread"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/posts/search",
+        "name": "Search for team posts"
+    },
+    {
+        "url": "/api/v4/posts/{post_id}/pin",
+        "name": "Pin a post to the channel"
+    },
+    {
+        "url": "/api/v4/posts/{post_id}/unpin",
+        "name": "Unpin a post to the channel"
+    },
+    {
+        "url": "/api/v4/posts/{post_id}/actions/{action_id}",
+        "name": "Perform a post action"
+    },
+    {
+        "url": "/api/v4/posts/ids",
+        "name": "Get posts by a list of ids"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/posts/{post_id}/reminder",
+        "name": "Set a post reminder"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/posts/{post_id}/ack",
+        "name": "Acknowledge a post"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/posts/{post_id}/ack",
+        "name": "Delete a post acknowledgement"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/threads",
+        "name": "Get all threads that user is following"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/threads/mention_counts",
+        "name": "Get all unread mention counts from followed threads, per-channel"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/threads/read",
+        "name": "Mark all threads that user is following as read"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/threads/{thread_id}/read/{timestamp}",
+        "name": "Mark a thread that user is following read state to the timestamp"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/threads/{thread_id}/set_unread/{post_id}",
+        "name": "Mark a thread that user is following as unread based on a post id"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/threads/{thread_id}/following",
+        "name": "Start following a thread"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/threads/{thread_id}/following",
+        "name": "Stop following a thread"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/teams/{team_id}/threads/{thread_id}",
+        "name": "Get a thread followed by the user"
+    },
+    {
+        "url": "/api/v4/files",
+        "name": "Upload a file"
+    },
+    {
+        "url": "/api/v4/files/{file_id}",
+        "name": "Get a file"
+    },
+    {
+        "url": "/api/v4/files/{file_id}/thumbnail",
+        "name": "Get a file's thumbnail"
+    },
+    {
+        "url": "/api/v4/files/{file_id}/preview",
+        "name": "Get a file's preview"
+    },
+    {
+        "url": "/api/v4/files/{file_id}/link",
+        "name": "Get a public file link"
+    },
+    {
+        "url": "/api/v4/files/{file_id}/info",
+        "name": "Get metadata for a file"
+    },
+    {
+        "url": "/files/{file_id}/public",
+        "name": "Get a public file"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/files/search",
+        "name": "Search files in a team"
+    },
+    {
+        "url": "/api/v4/uploads",
+        "name": "Create an upload"
+    },
+    {
+        "url": "/api/v4/uploads/{upload_id}",
+        "name": "Get an upload session"
+    },
+    {
+        "url": "/api/v4/uploads/{upload_id}",
+        "name": "Perform a file upload"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/preferences",
+        "name": "Get the user's preferences"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/preferences",
+        "name": "Save the user's preferences"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/preferences/delete",
+        "name": "Delete user's preferences"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/preferences/{category}",
+        "name": "List a user's preferences by category"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/preferences/{category}/name/{preference_name}",
+        "name": "Get a specific user preference"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/status",
+        "name": "Get user status"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/status",
+        "name": "Update user status"
+    },
+    {
+        "url": "/api/v4/users/status/ids",
+        "name": "Get user statuses by id"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/status/custom",
+        "name": "Update user custom status"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/status/custom",
+        "name": "Unsets user custom status"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/status/custom/recent",
+        "name": "Delete user's recent custom status"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/status/custom/recent/delete",
+        "name": "Delete user's recent custom status"
+    },
+    {
+        "url": "/api/v4/emoji",
+        "name": "Create a custom emoji"
+    },
+    {
+        "url": "/api/v4/emoji",
+        "name": "Get a list of custom emoji"
+    },
+    {
+        "url": "/api/v4/emoji/{emoji_id}",
+        "name": "Get a custom emoji"
+    },
+    {
+        "url": "/api/v4/emoji/{emoji_id}",
+        "name": "Delete a custom emoji"
+    },
+    {
+        "url": "/api/v4/emoji/name/{emoji_name}",
+        "name": "Get a custom emoji by name"
+    },
+    {
+        "url": "/api/v4/emoji/{emoji_id}/image",
+        "name": "Get custom emoji image"
+    },
+    {
+        "url": "/api/v4/emoji/search",
+        "name": "Search custom emoji"
+    },
+    {
+        "url": "/api/v4/emoji/autocomplete",
+        "name": "Autocomplete custom emoji"
+    },
+    {
+        "url": "/api/v4/reactions",
+        "name": "Create a reaction"
+    },
+    {
+        "url": "/api/v4/posts/{post_id}/reactions",
+        "name": "Get a list of reactions to a post"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/posts/{post_id}/reactions/{emoji_name}",
+        "name": "Remove a reaction from a post"
+    },
+    {
+        "url": "/api/v4/posts/ids/reactions",
+        "name": "Bulk get the reaction for posts"
+    },
+    {
+        "url": "/api/v4/hooks/incoming",
+        "name": "Create an incoming webhook"
+    },
+    {
+        "url": "/api/v4/hooks/incoming",
+        "name": "List incoming webhooks"
+    },
+    {
+        "url": "/api/v4/hooks/incoming/{hook_id}",
+        "name": "Get an incoming webhook"
+    },
+    {
+        "url": "/api/v4/hooks/incoming/{hook_id}",
+        "name": "Delete an incoming webhook"
+    },
+    {
+        "url": "/api/v4/hooks/incoming/{hook_id}",
+        "name": "Update an incoming webhook"
+    },
+    {
+        "url": "/api/v4/hooks/outgoing",
+        "name": "Create an outgoing webhook"
+    },
+    {
+        "url": "/api/v4/hooks/outgoing",
+        "name": "List outgoing webhooks"
+    },
+    {
+        "url": "/api/v4/hooks/outgoing/{hook_id}",
+        "name": "Get an outgoing webhook"
+    },
+    {
+        "url": "/api/v4/hooks/outgoing/{hook_id}",
+        "name": "Delete an outgoing webhook"
+    },
+    {
+        "url": "/api/v4/hooks/outgoing/{hook_id}",
+        "name": "Update an outgoing webhook"
+    },
+    {
+        "url": "/api/v4/hooks/outgoing/{hook_id}/regen_token",
+        "name": "Regenerate the token for the outgoing webhook."
+    },
+    {
+        "url": "/api/v4/commands",
+        "name": "Create a command"
+    },
+    {
+        "url": "/api/v4/commands",
+        "name": "List commands for a team"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/commands/autocomplete",
+        "name": "List autocomplete commands"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/commands/autocomplete_suggestions",
+        "name": "List commands' autocomplete data"
+    },
+    {
+        "url": "/api/v4/commands/{command_id}",
+        "name": "Get a command"
+    },
+    {
+        "url": "/api/v4/commands/{command_id}",
+        "name": "Update a command"
+    },
+    {
+        "url": "/api/v4/commands/{command_id}",
+        "name": "Delete a command"
+    },
+    {
+        "url": "/api/v4/commands/{command_id}/move",
+        "name": "Move a command"
+    },
+    {
+        "url": "/api/v4/commands/{command_id}/regen_token",
+        "name": "Generate a new token"
+    },
+    {
+        "url": "/api/v4/commands/execute",
+        "name": "Execute a command"
+    },
+    {
+        "url": "/api/v4/opengraph",
+        "name": "Get open graph metadata for url"
+    },
+    {
+        "url": "/api/v4/system/timezones",
+        "name": "Retrieve a list of supported timezones"
+    },
+    {
+        "url": "/api/v4/system/ping",
+        "name": "Check system health"
+    },
+    {
+        "url": "/api/v4/system/notices/{teamId}",
+        "name": "Get notices for logged in user in specified team"
+    },
+    {
+        "url": "/api/v4/system/notices/view",
+        "name": "Update notices as 'viewed'"
+    },
+    {
+        "url": "/api/v4/database/recycle",
+        "name": "Recycle database connections"
+    },
+    {
+        "url": "/api/v4/email/test",
+        "name": "Send a test email"
+    },
+    {
+        "url": "/api/v4/site_url/test",
+        "name": "Checks the validity of a Site URL"
+    },
+    {
+        "url": "/api/v4/file/s3_test",
+        "name": "Test AWS S3 connection"
+    },
+    {
+        "url": "/api/v4/config",
+        "name": "Get configuration"
+    },
+    {
+        "url": "/api/v4/config",
+        "name": "Update configuration"
+    },
+    {
+        "url": "/api/v4/config/reload",
+        "name": "Reload configuration"
+    },
+    {
+        "url": "/api/v4/config/client",
+        "name": "Get client configuration"
+    },
+    {
+        "url": "/api/v4/config/environment",
+        "name": "Get configuration made through environment variables"
+    },
+    {
+        "url": "/api/v4/config/patch",
+        "name": "Patch configuration"
+    },
+    {
+        "url": "/api/v4/license",
+        "name": "Upload license file"
+    },
+    {
+        "url": "/api/v4/license",
+        "name": "Remove license file"
+    },
+    {
+        "url": "/api/v4/license/client",
+        "name": "Get client license"
+    },
+    {
+        "url": "/api/v4/license/renewal",
+        "name": "Request the license renewal link"
+    },
+    {
+        "url": "/api/v4/trial-license",
+        "name": "Request and install a trial license for your server"
+    },
+    {
+        "url": "/api/v4/trial-license/prev",
+        "name": "Get last trial license used"
+    },
+    {
+        "url": "/api/v4/audits",
+        "name": "Get audits"
+    },
+    {
+        "url": "/api/v4/caches/invalidate",
+        "name": "Invalidate all the caches"
+    },
+    {
+        "url": "/api/v4/logs",
+        "name": "Get logs"
+    },
+    {
+        "url": "/api/v4/logs",
+        "name": "Add log message"
+    },
+    {
+        "url": "/api/v4/analytics/old",
+        "name": "Get analytics"
+    },
+    {
+        "url": "/api/v4/server_busy",
+        "name": "Set the server busy (high load) flag"
+    },
+    {
+        "url": "/api/v4/server_busy",
+        "name": "Get server busy expiry time."
+    },
+    {
+        "url": "/api/v4/server_busy",
+        "name": "Clears the server busy (high load) flag"
+    },
+    {
+        "url": "/api/v4/redirect_location",
+        "name": "Get redirect location"
+    },
+    {
+        "url": "/api/v4/image",
+        "name": "Get an image by url"
+    },
+    {
+        "url": "/api/v4/upgrade_to_enterprise",
+        "name": "Executes an inplace upgrade from Team Edition to Enterprise Edition"
+    },
+    {
+        "url": "/api/v4/upgrade_to_enterprise/status",
+        "name": "Get the current status for the inplace upgrade from Team Edition to Enterprise Edition"
+    },
+    {
+        "url": "/api/v4/restart",
+        "name": "Restart the system after an upgrade from Team Edition to Enterprise Edition"
+    },
+    {
+        "url": "/api/v4/warn_metrics/status",
+        "name": "Get the warn metrics status (enabled or disabled)"
+    },
+    {
+        "url": "/api/v4/warn_metrics/ack/{warn_metric_id}",
+        "name": "Acknowledge a warning of a metric status"
+    },
+    {
+        "url": "/api/v4/warn_metrics/trial-license-ack/{warn_metric_id}",
+        "name": "Request trial license and acknowledge a warning of a metric status"
+    },
+    {
+        "url": "/api/v4/integrity",
+        "name": "Perform a database integrity check"
+    },
+    {
+        "url": "/api/v4/system/support_packet",
+        "name": "Download a zip file which contains helpful and useful information for troubleshooting your mattermost instance."
+    },
+    {
+        "url": "/api/v4/plugins/marketplace/first_admin_visit",
+        "name": "Stores that the Plugin Marketplace has been visited by at least an admin."
+    },
+    {
+        "url": "/api/v4/brand/image",
+        "name": "Get brand image"
+    },
+    {
+        "url": "/api/v4/brand/image",
+        "name": "Upload brand image"
+    },
+    {
+        "url": "/api/v4/brand/image",
+        "name": "Delete current brand image"
+    },
+    {
+        "url": "/api/v4/oauth/apps",
+        "name": "Register OAuth app"
+    },
+    {
+        "url": "/api/v4/oauth/apps",
+        "name": "Get OAuth apps"
+    },
+    {
+        "url": "/api/v4/oauth/apps/{app_id}",
+        "name": "Get an OAuth app"
+    },
+    {
+        "url": "/api/v4/oauth/apps/{app_id}",
+        "name": "Update an OAuth app"
+    },
+    {
+        "url": "/api/v4/oauth/apps/{app_id}",
+        "name": "Delete an OAuth app"
+    },
+    {
+        "url": "/api/v4/oauth/apps/{app_id}/regen_secret",
+        "name": "Regenerate OAuth app secret"
+    },
+    {
+        "url": "/api/v4/oauth/apps/{app_id}/info",
+        "name": "Get info on an OAuth app"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/oauth/apps/authorized",
+        "name": "Get authorized OAuth apps"
+    },
+    {
+        "url": "/api/v4/users/migrate_auth/saml",
+        "name": "Migrate user accounts authentication type to SAML."
+    },
+    {
+        "url": "/api/v4/saml/metadata",
+        "name": "Get metadata"
+    },
+    {
+        "url": "/api/v4/saml/metadatafromidp",
+        "name": "Get metadata from Identity Provider"
+    },
+    {
+        "url": "/api/v4/saml/certificate/idp",
+        "name": "Upload IDP certificate"
+    },
+    {
+        "url": "/api/v4/saml/certificate/idp",
+        "name": "Remove IDP certificate"
+    },
+    {
+        "url": "/api/v4/saml/certificate/public",
+        "name": "Upload public certificate"
+    },
+    {
+        "url": "/api/v4/saml/certificate/public",
+        "name": "Remove public certificate"
+    },
+    {
+        "url": "/api/v4/saml/certificate/private",
+        "name": "Upload private key"
+    },
+    {
+        "url": "/api/v4/saml/certificate/private",
+        "name": "Remove private key"
+    },
+    {
+        "url": "/api/v4/saml/certificate/status",
+        "name": "Get certificate status"
+    },
+    {
+        "url": "/api/v4/saml/reset_auth_data",
+        "name": "Reset AuthData to Email"
+    },
+    {
+        "url": "/api/v4/users/migrate_auth/ldap",
+        "name": "Migrate user accounts authentication type to LDAP."
+    },
+    {
+        "url": "/api/v4/ldap/sync",
+        "name": "Sync with LDAP"
+    },
+    {
+        "url": "/api/v4/ldap/test",
+        "name": "Test LDAP configuration"
+    },
+    {
+        "url": "/api/v4/ldap/migrateid",
+        "name": "Migrate Id LDAP"
+    },
+    {
+        "url": "/api/v4/ldap/certificate/public",
+        "name": "Upload public certificate"
+    },
+    {
+        "url": "/api/v4/ldap/certificate/public",
+        "name": "Remove public certificate"
+    },
+    {
+        "url": "/api/v4/ldap/certificate/private",
+        "name": "Upload private key"
+    },
+    {
+        "url": "/api/v4/ldap/certificate/private",
+        "name": "Remove private key"
+    },
+    {
+        "url": "/api/v4/ldap/users/{user_id}/group_sync_memberships",
+        "name": "Create memberships for LDAP configured channels and teams for this user"
+    },
+    {
+        "url": "/api/v4/ldap/groups/{remote_id}/link",
+        "name": "Delete a link for LDAP group"
+    },
+    {
+        "url": "/api/v4/groups",
+        "name": "Get groups"
+    },
+    {
+        "url": "/api/v4/groups",
+        "name": "Create a custom group"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}",
+        "name": "Get a group"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}",
+        "name": "Deletes a custom group"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}/patch",
+        "name": "Patch a group"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}/restore",
+        "name": "Restore a previously deleted group."
+    },
+    {
+        "url": "/api/v4/groups/{group_id}/teams/{team_id}/link",
+        "name": "Link a team to a group"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}/teams/{team_id}/link",
+        "name": "Delete a link from a team to a group"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}/channels/{channel_id}/link",
+        "name": "Link a channel to a group"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}/channels/{channel_id}/link",
+        "name": "Delete a link from a channel to a group"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}/teams/{team_id}",
+        "name": "Get GroupSyncable from Team ID"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}/channels/{channel_id}",
+        "name": "Get GroupSyncable from channel ID"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}/teams",
+        "name": "Get group teams"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}/channels",
+        "name": "Get group channels"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}/teams/{team_id}/patch",
+        "name": "Patch a GroupSyncable associated to Team"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}/channels/{channel_id}/patch",
+        "name": "Patch a GroupSyncable associated to Channel"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}/members",
+        "name": "Get group users"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}/members",
+        "name": "Removes members from a custom group"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}/members",
+        "name": "Adds members to a custom group"
+    },
+    {
+        "url": "/api/v4/groups/{group_id}/stats",
+        "name": "Get group stats"
+    },
+    {
+        "url": "/api/v4/channels/{channel_id}/groups",
+        "name": "Get channel groups"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/groups",
+        "name": "Get team groups"
+    },
+    {
+        "url": "/api/v4/teams/{team_id}/groups_by_channels",
+        "name": "Get team groups by channels"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/groups",
+        "name": "Get groups for a userId"
+    },
+    {
+        "url": "/api/v4/compliance/reports",
+        "name": "Create report"
+    },
+    {
+        "url": "/api/v4/compliance/reports",
+        "name": "Get reports"
+    },
+    {
+        "url": "/api/v4/compliance/reports/{report_id}",
+        "name": "Get a report"
+    },
+    {
+        "url": "/api/v4/compliance/reports/{report_id}/download",
+        "name": "Download a report"
+    },
+    {
+        "url": "/api/v4/cluster/status",
+        "name": "Get cluster status"
+    },
+    {
+        "url": "/api/v4/cloud/limits",
+        "name": "Get cloud workspace limits"
+    },
+    {
+        "url": "/api/v4/cloud/products",
+        "name": "Get cloud products"
+    },
+    {
+        "url": "/api/v4/cloud/payment",
+        "name": "Create a customer setup payment intent"
+    },
+    {
+        "url": "/api/v4/cloud/payment/confirm",
+        "name": "Completes the payment setup intent"
+    },
+    {
+        "url": "/api/v4/cloud/customer",
+        "name": "Get cloud customer"
+    },
+    {
+        "url": "/api/v4/cloud/customer",
+        "name": "Update cloud customer"
+    },
+    {
+        "url": "/api/v4/cloud/customer/address",
+        "name": "Update cloud customer address"
+    },
+    {
+        "url": "/api/v4/cloud/subscription",
+        "name": "Get cloud subscription"
+    },
+    {
+        "url": "/api/v4/cloud/subscription/invoices",
+        "name": "Get cloud subscription invoices"
+    },
+    {
+        "url": "/api/v4/cloud/subscription/invoices/{invoice_id}/pdf",
+        "name": "Get cloud invoice PDF"
+    },
+    {
+        "url": "/api/v4/cloud/webhook",
+        "name": "POST endpoint for CWS Webhooks"
+    },
+    {
+        "url": "/api/v4/elasticsearch/test",
+        "name": "Test Elasticsearch configuration"
+    },
+    {
+        "url": "/api/v4/elasticsearch/purge_indexes",
+        "name": "Purge all Elasticsearch indexes"
+    },
+    {
+        "url": "/api/v4/bleve/purge_indexes",
+        "name": "Purge all Bleve indexes"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/data_retention/team_policies",
+        "name": "Get the policies which are applied to a user's teams"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/data_retention/channel_policies",
+        "name": "Get the policies which are applied to a user's channels"
+    },
+    {
+        "url": "/api/v4/data_retention/policy",
+        "name": "Get the global data retention policy"
+    },
+    {
+        "url": "/api/v4/data_retention/policies_count",
+        "name": "Get the number of granular data retention policies"
+    },
+    {
+        "url": "/api/v4/data_retention/policies",
+        "name": "Get the granular data retention policies"
+    },
+    {
+        "url": "/api/v4/data_retention/policies",
+        "name": "Create a new granular data retention policy"
+    },
+    {
+        "url": "/api/v4/data_retention/policies/{policy_id}",
+        "name": "Get a granular data retention policy"
+    },
+    {
+        "url": "/api/v4/data_retention/policies/{policy_id}",
+        "name": "Patch a granular data retention policy"
+    },
+    {
+        "url": "/api/v4/data_retention/policies/{policy_id}",
+        "name": "Delete a granular data retention policy"
+    },
+    {
+        "url": "/api/v4/data_retention/policies/{policy_id}/teams",
+        "name": "Get the teams for a granular data retention policy"
+    },
+    {
+        "url": "/api/v4/data_retention/policies/{policy_id}/teams",
+        "name": "Add teams to a granular data retention policy"
+    },
+    {
+        "url": "/api/v4/data_retention/policies/{policy_id}/teams",
+        "name": "Delete teams from a granular data retention policy"
+    },
+    {
+        "url": "/api/v4/data_retention/policies/{policy_id}/teams/search",
+        "name": "Search for the teams in a granular data retention policy"
+    },
+    {
+        "url": "/api/v4/data_retention/policies/{policy_id}/channels",
+        "name": "Get the channels for a granular data retention policy"
+    },
+    {
+        "url": "/api/v4/data_retention/policies/{policy_id}/channels",
+        "name": "Add channels to a granular data retention policy"
+    },
+    {
+        "url": "/api/v4/data_retention/policies/{policy_id}/channels",
+        "name": "Delete channels from a granular data retention policy"
+    },
+    {
+        "url": "/api/v4/data_retention/policies/{policy_id}/channels/search",
+        "name": "Search for the channels in a granular data retention policy"
+    },
+    {
+        "url": "/api/v4/jobs",
+        "name": "Get the jobs."
+    },
+    {
+        "url": "/api/v4/jobs",
+        "name": "Create a new job."
+    },
+    {
+        "url": "/api/v4/jobs/{job_id}",
+        "name": "Get a job."
+    },
+    {
+        "url": "/api/v4/jobs/{job_id}/download",
+        "name": "Download the results of a job."
+    },
+    {
+        "url": "/api/v4/jobs/{job_id}/cancel",
+        "name": "Cancel a job."
+    },
+    {
+        "url": "/api/v4/jobs/type/{type}",
+        "name": "Get the jobs of the given type."
+    },
+    {
+        "url": "/api/v4/plugins",
+        "name": "Upload plugin"
+    },
+    {
+        "url": "/api/v4/plugins",
+        "name": "Get plugins"
+    },
+    {
+        "url": "/api/v4/plugins/install_from_url",
+        "name": "Install plugin from url"
+    },
+    {
+        "url": "/api/v4/plugins/{plugin_id}",
+        "name": "Remove plugin"
+    },
+    {
+        "url": "/api/v4/plugins/{plugin_id}/enable",
+        "name": "Enable plugin"
+    },
+    {
+        "url": "/api/v4/plugins/{plugin_id}/disable",
+        "name": "Disable plugin"
+    },
+    {
+        "url": "/api/v4/plugins/webapp",
+        "name": "Get webapp plugins"
+    },
+    {
+        "url": "/api/v4/plugins/statuses",
+        "name": "Get plugins status"
+    },
+    {
+        "url": "/api/v4/plugins/marketplace",
+        "name": "Installs a marketplace plugin"
+    },
+    {
+        "url": "/api/v4/plugins/marketplace",
+        "name": "Gets all the marketplace plugins"
+    },
+    {
+        "url": "/api/v4/plugins/marketplace/first_admin_visit",
+        "name": "Get if the Plugin Marketplace has been visited by at least an admin."
+    },
+    {
+        "url": "/api/v4/roles",
+        "name": "Get a list of all the roles"
+    },
+    {
+        "url": "/api/v4/roles/{role_id}",
+        "name": "Get a role"
+    },
+    {
+        "url": "/api/v4/roles/name/{role_name}",
+        "name": "Get a role"
+    },
+    {
+        "url": "/api/v4/roles/{role_id}/patch",
+        "name": "Patch a role"
+    },
+    {
+        "url": "/api/v4/roles/names",
+        "name": "Get a list of roles by name"
+    },
+    {
+        "url": "/api/v4/schemes",
+        "name": "Get the schemes."
+    },
+    {
+        "url": "/api/v4/schemes",
+        "name": "Create a scheme"
+    },
+    {
+        "url": "/api/v4/schemes/{scheme_id}",
+        "name": "Get a scheme"
+    },
+    {
+        "url": "/api/v4/schemes/{scheme_id}",
+        "name": "Delete a scheme"
+    },
+    {
+        "url": "/api/v4/schemes/{scheme_id}/patch",
+        "name": "Patch a scheme"
+    },
+    {
+        "url": "/api/v4/schemes/{scheme_id}/teams",
+        "name": "Get a page of teams which use this scheme."
+    },
+    {
+        "url": "/api/v4/schemes/{scheme_id}/channels",
+        "name": "Get a page of channels which use this scheme."
+    },
+    {
+        "url": "/api/v4/actions/dialogs/open",
+        "name": "Open a dialog"
+    },
+    {
+        "url": "/api/v4/actions/dialogs/submit",
+        "name": "Submit a dialog"
+    },
+    {
+        "url": "/api/v4/sharedchannels/{team_id}",
+        "name": "Get all shared channels for team."
+    },
+    {
+        "url": "/api/v4/sharedchannels/remote_info/{remote_id}",
+        "name": "Get remote cluster info by ID for user."
+    },
+    {
+        "url": "/api/v4/users/{user_id}/terms_of_service",
+        "name": "Records user action when they accept or decline custom terms of service"
+    },
+    {
+        "url": "/api/v4/users/{user_id}/terms_of_service",
+        "name": "Fetches user's latest terms of service action if the latest action was for acceptance."
+    },
+    {
+        "url": "/api/v4/terms_of_service",
+        "name": "Get latest terms of service"
+    },
+    {
+        "url": "/api/v4/terms_of_service",
+        "name": "Creates a new terms of service"
+    },
+    {
+        "url": "/api/v4/imports",
+        "name": "List import files"
+    },
+    {
+        "url": "/api/v4/permissions/ancillary",
+        "name": "Return all system console subsection ancillary permissions"
+    },
+    {
+        "url": "/api/v4/exports",
+        "name": "List export files"
+    },
+    {
+        "url": "/api/v4/exports/{export_name}",
+        "name": "Download an export file"
+    },
+    {
+        "url": "/api/v4/exports/{export_name}",
+        "name": "Delete an export file"
+    },
+    {
+        "url": "/api/v4/usage/posts",
+        "name": "Get current usage of posts"
+    },
+    {
+        "url": "/api/v4/usage/storage",
+        "name": "Get the total file storage usage for the instance in bytes."
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/playbooks",
+        "name": "List all playbooks"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/playbooks",
+        "name": "Create a playbook"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/playbooks/{id}",
+        "name": "Get a playbook"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/playbooks/{id}",
+        "name": "Update a playbook"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/playbooks/{id}",
+        "name": "Delete a playbook"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs",
+        "name": "List all playbook runs"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs",
+        "name": "Create a new playbook run"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/owners",
+        "name": "Get all owners"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/channels",
+        "name": "Get playbook run channels"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/channel/{channel_id}",
+        "name": "Find playbook run by channel ID"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}",
+        "name": "Get a playbook run"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}",
+        "name": "Update a playbook run"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}/metadata",
+        "name": "Get playbook run metadata"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}/end",
+        "name": "End a playbook run"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}/restart",
+        "name": "Restart a playbook run"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}/status",
+        "name": "Update a playbook run's status"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}/finish",
+        "name": "Finish a playbook"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}/owner",
+        "name": "Update playbook run owner"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}/checklists/{checklist}/add",
+        "name": "Add an item to a playbook run's checklist"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}/checklists/{checklist}/reorder",
+        "name": "Reorder an item in a playbook run's checklist"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}/checklists/{checklist}/item/{item}",
+        "name": "Update an item of a playbook run's checklist"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}/checklists/{checklist}/item/{item}",
+        "name": "Delete an item of a playbook run's checklist"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}/checklists/{checklist}/item/{item}/state",
+        "name": "Update the state of an item"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}/checklists/{checklist}/item/{item}/assignee",
+        "name": "Update the assignee of an item"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}/checklists/{checklist}/item/{item}/run",
+        "name": "Run an item's slash command"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/playbooks/{id}/autofollows",
+        "name": "Get the list of followers' user IDs of a playbook"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}/timeline/{event_id}/",
+        "name": "Remove a timeline event from the playbook run"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/dialog",
+        "name": "Create a new playbook run from dialog"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/checklist-autocomplete",
+        "name": "Get autocomplete data for /playbook check"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}/end",
+        "name": "End a playbook run from dialog"
+    },
+    {
+        "url": "/plugins/playbooks/api/v0/runs/{id}/next-stage-dialog",
+        "name": "Go to next stage from dialog"
+    }
+]

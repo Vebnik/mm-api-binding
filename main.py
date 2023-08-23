@@ -3,7 +3,8 @@ from os import getenv
 
 from src.bot.bot import Bot
 from src.bot.schemas import BotConfig, Event
-from src.ws.schemas import HelloEvent, PostedEvent
+from src.ws.schemas import posts
+
 
 
 def main() -> None:
@@ -14,13 +15,9 @@ def main() -> None:
 
     bot = Bot(config)
 
-    @bot.listen(action=Event.hello)
-    def on_hello(event: HelloEvent) -> None:
-        print(event.data.connection_id)
-
     @bot.listen(action=Event.posted)
-    def on_new_message(event: PostedEvent) -> None:
-        print(f'Message from {event.data.channel_display_name} | type {event.data.channel_type}')
+    def on_new_post(event: posts.PostedEvent) -> None:
+        event.reply('Nice iphone')
 
     bot.run()
 

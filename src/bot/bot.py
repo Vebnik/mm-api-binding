@@ -1,9 +1,9 @@
-from typing import Callable
+from typing import Callable, Any
 
-from src.bot.schemas import BotConfig, Event
+from src.bot.schemas import BotConfig
 from src.bot.utils import Logger
-#
 from src.ws.ws import WSGateway
+
 
 class Bot:
 
@@ -17,13 +17,13 @@ class Bot:
         WSGateway.init(self.config, self.handlers)
 
     def listen(self, action: str) -> Callable:
-        def wrapper(func):
+        def wrapper(func) -> Callable:
 
             Logger.info(f'Register listener to -> {action} | {func.__name__}')
 
             self.handlers[action] = func
 
-            def inner(*args, **kwargs):
+            def inner(*args, **kwargs) -> Any:
                 return func(*args, **kwargs)
             return inner
         return wrapper

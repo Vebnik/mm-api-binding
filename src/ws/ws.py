@@ -1,9 +1,10 @@
 from typing import Callable, Any
+from websocket import WebSocketApp
 import rel, websocket, json
 
 from src.bot.schemas import BotConfig
 from src.bot.utils import Logger
-from src.ws.schemas import event_model
+from src.ws.schemas.base import event_model, BaseEvent
 
 
 class WSGateway:
@@ -12,7 +13,7 @@ class WSGateway:
     config: BotConfig
 
     @classmethod
-    def on_message(cls, ws: websocket.WebSocketApp, message):
+    def on_message(cls, ws: WebSocketApp, message: str) -> None:
         Logger.info('New Message')
 
         event_message: dict = json.loads(message)
@@ -20,21 +21,24 @@ class WSGateway:
 
         if event_name:
             if not event_model.get(event_name): return
-            event = event_model[event_name].model_validate(event_message)
+            event: BaseEvent = event_model[event_name].model_validate(event_message)
 
-            if not  cls.handlers.get(event.event): return
+            if not cls.handlers.get(event.event): 
+                Logger.info(f'Not found handler for "{event.event}" event')
+                return
+            
             cls.handlers[event.event](event)
 
     @classmethod
-    def on_error(cls, ws: websocket.WebSocketApp, error):
+    def on_error(cls, ws: WebSocketApp, error) -> None:
         Logger.error(error)
 
     @classmethod
-    def on_close(cls, ws: websocket.WebSocketApp, close_status_code, close_msg):
+    def on_close(cls, ws: WebSocketApp, close_status_code, close_msg) -> None:
         Logger.info("Closed connection")
 
     @classmethod
-    def on_open(cls, ws: websocket.WebSocketApp):
+    def on_open(cls, ws: WebSocketApp) -> None:
         Logger.info("Opened connection")
 
         auth_data = {
@@ -49,13 +53,14 @@ class WSGateway:
 
     @classmethod
     def init(cls, config: BotConfig, handlers: dict[str, Callable]) -> None:
-        Logger.info('Try ot init ws')
+        Logger.info('Try to init ws')
 
         cls.handlers = handlers
         cls.config = config
 
         websocket.enableTrace(False)
-        ws = websocket.WebSocketApp(
+
+        ws = WebSocketApp(
             config.endpoint,
             on_open=cls.on_open,
             on_message=cls.on_message,
