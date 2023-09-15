@@ -4,6 +4,7 @@ from pydantic import BaseModel
 class BotConfig(BaseModel):
     token: str
     endpoint: str
+    api_endpoint: str
 
 
 class Event:

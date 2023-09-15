@@ -1,46 +1,36 @@
 from typing import Any
-from os import getenv
-from requests import request
+from requests import Session
 
 from src.bot.utils import Logger
-from src.api.schemas import Endpoints, PostData
+from src.bot.schemas import BotConfig
+from src.api.schemas import Endpoints
+
 
 class Client:
 
-    root_url: str = getenv('ENDPOINT', '')
-    token: str = getenv('TOKEN', '')
-    headers = {
-        'Content-Type': 'application/json',
-        'Authorization': f'Bearer {token}'
-    }
+    root_url: str
+    session: Session
 
     @classmethod
-    def execute(cls, command: str, method: str, data: Any = {}) -> Any:
+    def init(cls, config: BotConfig):
+        cls.session = Session()
+        cls.root_url = config.api_endpoint
+        cls.session.headers = {
+            'Content-Type': 'application/json',
+            'Authorization': f'Bearer {config.token}'
+        }
+
+    @classmethod
+    def execute(cls, endpoint: str, method: str, data: dict|list = {}) -> Any:
         try:
-            if method in ['post', 'patch', 'put']:
-                response = request(method, f'{cls.root_url}{command}', json=data, headers=cls.headers)
-                Logger.info('Execute api')
+            response = cls.session.request(method, f'{cls.root_url}{endpoint}', json=data)
 
-            if method in ['get', 'delete']:
-                response = request(method, f'{cls.root_url}{command}', headers=cls.headers)
-                Logger.info('Execute api')
-
+            if response.ok:
+                return response.json()
         except Exception as ex:
             Logger.error(ex)
 
-
-class Posts:
-
     @classmethod
-    def create(cls, post_data: PostData) -> Any:
-        data = post_data.model_dump()
-        Client.execute(Endpoints.create_post, 'post', data)
-
-    @classmethod
-    def add_reaction(cls, post_data: PostData) -> Any:
-        data = post_data.model_dump()
-        Client.execute(Endpoints.create_post, 'post', data)
-
-    @classmethod
-    def get(cls) -> Any:
-        ...
+    def get_client_info(cls, client_user_id: str) -> Any:
+        data = [client_user_id]
+        return cls.execute(Endpoints.get_users_by_ids, 'get', data)

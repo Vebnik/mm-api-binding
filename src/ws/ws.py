@@ -1,34 +1,33 @@
-from typing import Callable, Any
+from typing import Callable, Any, Type
 from websocket import WebSocketApp
 import rel, websocket, json
 
 from src.bot.schemas import BotConfig
 from src.bot.utils import Logger
-from src.ws.schemas.base import event_model, BaseEvent
+from src.ws.schemas.base import event_model
 
 
 class WSGateway:
 
     handlers: dict[str, Callable] = {}
     config: BotConfig
+    client_info: dict
 
     @classmethod
     def on_message(cls, ws: WebSocketApp, message: str) -> None:
         Logger.info('New Message')
 
         event_message: dict = json.loads(message)
-        event_name = event_message.get('event', '')
+        event_name = event_message.get('event')
 
-        if event_name:
-            if not event_model.get(event_name): return
-            event: BaseEvent = event_model[event_name].model_validate(event_message)
+        if not event_name: return
 
-            if not cls.handlers.get(event.event): 
-                Logger.info(f'Not found handler for "{event.event}" event')
-                return
-            
-            cls.handlers[event.event](event)
-
+        match event_name:
+            case 'hello':
+                cls.client_info = event_message.get('broadcast', {})
+            case _:
+                cls.handlers[event_name](event_model[event_name].model_validate(event_message))
+                
     @classmethod
     def on_error(cls, ws: WebSocketApp, error) -> None:
         Logger.error(error)
@@ -53,7 +52,7 @@ class WSGateway:
 
     @classmethod
     def init(cls, config: BotConfig, handlers: dict[str, Callable]) -> None:
-        Logger.info('Try to init ws')
+        Logger.info('Init ws')
 
         cls.handlers = handlers
         cls.config = config

@@ -4,11 +4,15 @@ from src.api.service import Posts
 from src.api.schemas import PostData, ReactionData
 
 
-
-class Post(BaseModel):
-    id: str
-    create_at: int
+class Reaction(BaseModel):
     user_id: str
+    post_id: str
+    emoji_name: str
+    create_at: int
+    update_at: int
+    delete_at: int
+    remote_id: str | None
+    channel_id: str
 
 
 class Broadcast(BaseModel):
@@ -20,25 +24,18 @@ class Broadcast(BaseModel):
     omit_connection_id: str | None
 
 
-class PostedEventData(BaseModel):
-    channel_display_name: str
-    channel_name: str
-    channel_type: str
-    mentions: str | None = None
-    post: Post | str = ''
-    sender_name: str
-    set_online: bool
-    team_id: str
+class ReactionAddedEventData(BaseModel):
+    reaction: Reaction | str = ''
 
-    @field_validator('post')
+    @field_validator('reaction')
     @classmethod
-    def validate_post(cls, value: str) -> Post:
-        return Post.model_validate_json(value)
+    def validate_reaction(cls, value: str) -> Reaction:
+        return Reaction.model_validate_json(value)
     
     
-class PostedEvent(BaseModel):
+class ReactionAddedEvent(BaseModel):
     event: str
-    data: PostedEventData
+    data: ReactionAddedEventData
     broadcast: Broadcast
     seq: int
 
@@ -57,5 +54,5 @@ class PostedEvent(BaseModel):
             post_id=self.data.post.id,
             emoji_name=emoji
         )
-        
         Posts.add_reaction(data)
+
